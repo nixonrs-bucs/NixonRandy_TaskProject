@@ -1,5 +1,5 @@
 ﻿namespace NixonRandy_TaskProject.Models.Entities;
-public class Task : Project
+public class ProjectTask : Project
 {
     public int projectId { get; set; }
     public string TaskTitle { get; set; } = string.Empty;
