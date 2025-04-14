@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NixonRandy_TaskProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62faae60122241824d548388b9552fbd7a6c0237")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be821d9a1444cc3909433ae88bbfa0258a716cfa")]
 [assembly: System.Reflection.AssemblyProductAttribute("NixonRandy_TaskProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NixonRandy_TaskProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
