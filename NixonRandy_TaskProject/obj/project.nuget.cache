@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JbI5SGg24w8=",
+  "dgSpecHash": "yjYyTLLs3nc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\randy\\Desktop\\C# repo\\CSCI 3110 Adv Web\\Project\\NixonRandy_TaskProject\\NixonRandy_TaskProject.csproj",
+  "projectFilePath": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_TaskProject\\NixonRandy_TaskProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\randy\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\randy\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
