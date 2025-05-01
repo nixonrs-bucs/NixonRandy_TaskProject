@@ -5,13 +5,14 @@ using NixonRandy_TaskProject.Data;
 using NixonRandy_TaskProject.Models.Entities;
 namespace NixonRandy_TaskProject.Services;
 
-public class ApplicationDbContextProject : ApplicationDbContext
+public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContextProject(DbContextOptions<ApplicationDbContext> options)
+    public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
+        
     }
-    public DbSet<IdentityUser> Users => Set<IdentityUser>();
+    public  DbSet <IdentityUser> Users => Set<IdentityUser>();
     public DbSet <ProjectTask> Tasks => Set<ProjectTask>();
     public DbSet <Project> Projects => Set<Project>();
 }

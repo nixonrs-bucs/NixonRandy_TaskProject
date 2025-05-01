@@ -398,3 +398,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+NixonRandy_TaskProject/obj/Debug/net8.0/NixonRandy_TaskProject.assets.cache
+NixonRandy_TaskProject/obj/Debug/net8.0/NixonRandy_TaskProject.csproj.AssemblyReference.cache
+NixonRandy_TaskProject/obj/Debug/net8.0/NixonRandy_TaskProject.AssemblyInfoInputs.cache
