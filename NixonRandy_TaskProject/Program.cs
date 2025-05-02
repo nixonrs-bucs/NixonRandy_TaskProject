@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using NixonRandy_TaskProject.Data;
 using NixonRandy_TaskProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,14 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-builder.Services.AddDbContext<NixonRandy_TaskProject.Services.ApplicationDbContext>(options => { 
+builder.Services.AddDbContext<NixonRandy_TaskProject.Services.ApplicationDbContext>(options =>
+{
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
+});
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<NixonRandy_TaskProject.Data.ApplicationDbContext>();
+    .AddEntityFrameworkStores<NixonRandy_TaskProject.Services.ApplicationDbContext>();
 
 builder.Services.AddScoped<IProjectRepo, ProjectRepo>();
 builder.Services.AddScoped<ITasksRepo, TaskRepo>();
@@ -23,6 +23,8 @@ builder.Services.AddScoped<ITasksRepo, TaskRepo>();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
+//app.Services.GetRequiredService<ITasksRepo>();
+//app.Services.GetRequiredService<IProjectRepo>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -35,6 +37,8 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseDeveloperExceptionPage();
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -46,5 +50,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 app.MapRazorPages();
 app.Run();
