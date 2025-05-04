@@ -14,6 +14,7 @@ namespace NixonRandy_Project1.Services
         }
         public async Task<User> RegisterAsync(User user)
         {
+            user.CreatedAt = DateTime.Now;
             await _db.Users.AddAsync(user);
             await _db.SaveChangesAsync();
             return user;

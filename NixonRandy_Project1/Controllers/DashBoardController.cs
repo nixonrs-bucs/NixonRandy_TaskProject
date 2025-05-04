@@ -8,11 +8,10 @@ namespace NixonRandy_Project1.Controllers
     public class DashBoardController : Controller
     {
         private readonly IProjectRepo _projectRepo;
-        private readonly ILogger _logger;
-        public DashBoardController(IProjectRepo projectRepo, ILogger logger)
+        public DashBoardController(IProjectRepo projectRepo)
         {
             _projectRepo = projectRepo;
-            _logger = logger;
+            
         }
         // GET:
         [HttpGet, ActionName(nameof(DashboardIndex))]
@@ -41,14 +40,14 @@ namespace NixonRandy_Project1.Controllers
         }
 
         // GET: Dashboard/Create
-        [HttpGet, ActionName(nameof(GetCreate))]
-        public IActionResult GetCreate()
+        [HttpGet]
+        public IActionResult Create()
         {
             return View();
         }
 
         // POST: Dashboard/Create
-        [HttpPost, ActionName(nameof(Create))]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         //I had to clarify the namespace because project is in fact a keyword in C#
         public async Task<IActionResult> Create(NixonRandy_Project1.Models.Entities.Project project)
@@ -65,8 +64,8 @@ namespace NixonRandy_Project1.Controllers
         }
 
         // GET: Dashboard/Edit/5
-        [HttpGet, ActionName(nameof(getEdit))]
-        public async Task<IActionResult> getEdit(int id)
+        [HttpGet, ActionName(nameof(Edit))]
+        public async Task<IActionResult> Edit(int id)
         {
             var project = await _projectRepo.DetailsAsync(id);
             if (project == null)

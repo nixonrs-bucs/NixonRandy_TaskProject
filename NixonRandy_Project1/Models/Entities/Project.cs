@@ -16,19 +16,11 @@ public class Project
     [StringLength(500)]
     public string? Description { get; set; } = string.Empty;
     [DataType(DataType.Date)]
-    public DateTime CreationDate 
-    {
-        get 
-        {
-            return DateTime.Now;
-        }       
-        set 
-        {
-            CreationDate = DateTime.Now;
-        }
-    }
+    public DateTime CreationDate { get; set; }
     [DataType(DataType.Date)]   
     public DateTime? DueDate { get; set; } = null;
+    [ForeignKey(nameof(Task))]
+    public int? TaskId { get; set; }
     [DataType(nameof(Tasks))]
     public IEnumerable<ProjectTask>? Tasks { get; set; } = new List<ProjectTask>();
     [ForeignKey(nameof(UserId))]
