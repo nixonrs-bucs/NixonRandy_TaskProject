@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\NixonRandy_TaskProject.props" />
-</Project>
