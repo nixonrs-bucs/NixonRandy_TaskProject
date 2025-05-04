@@ -12,15 +12,15 @@ using NixonRandy_Project1.Services;
 namespace NixonRandy_Project1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250504025834_Project1")]
-    partial class Project1
+    [Migration("20250504045531_Project11")]
+    partial class Project11
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "8.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -40,13 +40,11 @@ namespace NixonRandy_Project1.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("nvarchar(13)");
-
                     b.Property<DateTime?>("DueDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("TaskId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -61,10 +59,44 @@ namespace NixonRandy_Project1.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Projects");
+                });
 
-                    b.HasDiscriminator().HasValue("Project");
+            modelBuilder.Entity("NixonRandy_Project1.Models.Entities.ProjectTask", b =>
+                {
+                    b.Property<int>("TaskId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.UseTphMappingStrategy();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaskId"));
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TaskCreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TaskDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("TaskDueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TaskTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TaskId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tasks");
                 });
 
             modelBuilder.Entity("NixonRandy_Project1.Models.Entities.User", b =>
@@ -99,33 +131,6 @@ namespace NixonRandy_Project1.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("NixonRandy_Project1.Models.Entities.ProjectTask", b =>
-                {
-                    b.HasBaseType("NixonRandy_Project1.Models.Entities.Project");
-
-                    b.Property<int?>("ProjectId1")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("TaskCreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("TaskDescription")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<DateTime?>("TaskDueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("TaskTitle")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasIndex("ProjectId1");
-
-                    b.HasDiscriminator().HasValue("ProjectTask");
-                });
-
             modelBuilder.Entity("NixonRandy_Project1.Models.Entities.Project", b =>
                 {
                     b.HasOne("NixonRandy_Project1.Models.Entities.User", "Fuser")
@@ -137,9 +142,19 @@ namespace NixonRandy_Project1.Migrations
 
             modelBuilder.Entity("NixonRandy_Project1.Models.Entities.ProjectTask", b =>
                 {
-                    b.HasOne("NixonRandy_Project1.Models.Entities.Project", null)
+                    b.HasOne("NixonRandy_Project1.Models.Entities.Project", "Fproject")
                         .WithMany("Tasks")
-                        .HasForeignKey("ProjectId1");
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NixonRandy_Project1.Models.Entities.User", "Fuser")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Fproject");
+
+                    b.Navigation("Fuser");
                 });
 
             modelBuilder.Entity("NixonRandy_Project1.Models.Entities.Project", b =>

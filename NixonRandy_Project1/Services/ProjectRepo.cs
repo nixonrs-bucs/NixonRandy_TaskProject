@@ -20,6 +20,7 @@ public class ProjectRepo : IProjectRepo
     }
     public async Task<Project> CreateAsync(Project project)
     {
+        project.CreationDate = DateTime.Now;
         await _db.Projects.AddAsync(project);
         await _db.SaveChangesAsync();
         return project;

@@ -7,7 +7,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//builder.Services.AddScoped<ILogger<Program>, Logger<Program>>(); // Add logging service
+builder.Services.AddScoped<IProjectRepo, ProjectRepo>();
+builder.Services.AddScoped<ITasksRepo, TaskRepo>();
+builder.Services.AddScoped<IUserRepo, UserRepo>();  
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

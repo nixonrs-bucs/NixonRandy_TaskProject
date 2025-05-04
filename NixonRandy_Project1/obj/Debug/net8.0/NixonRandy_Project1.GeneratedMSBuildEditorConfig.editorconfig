@@ -28,8 +28,28 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Dashboard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Dashboard/DashboardIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Dashboard/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Dashboard/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Dashboard/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Home/Index.cshtml]
@@ -38,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/ProjectTask/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFRhc2tcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/randy/Desktop/GitHub/NixonRandy_TaskProject/NixonRandy_Project1/Views/Shared/Error.cshtml]

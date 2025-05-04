@@ -19,6 +19,7 @@ public class TaskRepo : ITasksRepo
     }
     public async Task<ProjectTask> CreateAsync(ProjectTask tasks)
     {
+        tasks.TaskCreationDate = DateTime.Now;
         await _db.Tasks.AddAsync(tasks);
         await _db.SaveChangesAsync();
         return tasks;
@@ -28,9 +29,9 @@ public class TaskRepo : ITasksRepo
         var existingTask = await _db.Tasks.FindAsync(id);
         if (existingTask != null)
         {
-            existingTask.Title = tasks.Title;
-            existingTask.Description = tasks.Description;
-            existingTask.DueDate = tasks.DueDate;
+            existingTask.TaskTitle = tasks.TaskTitle;
+            existingTask.TaskDescription = tasks.TaskDescription;
+            existingTask.TaskDueDate = tasks.TaskDueDate;
             await _db.SaveChangesAsync();
         }
     }

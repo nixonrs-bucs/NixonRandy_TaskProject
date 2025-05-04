@@ -15,17 +15,7 @@ public class User
     [StringLength(100)]
     public string Email { get; set; } = string.Empty;
     [DataType(DataType.DateTime)]
-    public DateTime CreatedAt
-    {
-        get 
-        {
-            return DateTime.Now;
-        }
-        set
-        {
-            CreatedAt = DateTime.Now;
-        }
-    }
+    public DateTime CreatedAt { get; set; }
     [DataType(DataType.DateTime)]
     public DateTime? UpdatedAt { get; set; } = null;
     [DataType(nameof(IsActive))]
