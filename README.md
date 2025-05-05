@@ -1,2 +1,6 @@
 # NixonRandy_TaskProject
-Final project for CSCI 3110 Adv Web 
+The final project for CSCI 3110 Adv Web 
+## My project is in the **Main** branch and I had a **prod** branch for issues from earlier on. 
+### So, The only things that I got working on were the CRRUD, API, and adding a little style to it. The issue I had with implementing JS or Ajax is that the table data wouldn't correctly produce onto the table but it would in the console. The many-to-many relationship kept crashing so I passed that option up. 
+# AI Disclosure:
+- I  used the AI within the Visual Studio that gave you the option of tab completion and asked Gemini about issues and how to get around without copying and pasting the code. 
