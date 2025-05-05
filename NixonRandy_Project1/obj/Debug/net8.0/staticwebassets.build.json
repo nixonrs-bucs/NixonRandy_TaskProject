@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NB7D0xUYwSrpfZ92j7Bdl/KOu7I45fcBMSkfgl/GQOw=",
+  "Hash": "ag4n/auupVQ7VgcTyKuXfhFT9ITZuRh62Bp+NAVrrAg=",
   "Source": "NixonRandy_Project1",
   "BasePath": "_content/NixonRandy_Project1",
   "Mode": "Default",
@@ -1375,11 +1375,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u3zomt2hro",
-      "Integrity": "upEFV+FC+vk7025PeLobsFL1tIWu3r/7oPr1lQtmKIk=",
+      "Fingerprint": "6xoyz6egjr",
+      "Integrity": "qm0vDRNxj/lYKDZfBRVW24F3GwfPf1DwalPiAHHP+x8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\ProjectCreate.js"
+    },
+    {
+      "Identity": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectDetails.js",
+      "SourceId": "NixonRandy_Project1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\",
+      "BasePath": "_content/NixonRandy_Project1",
+      "RelativePath": "js/ProjectDetails#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s6upf42wzn",
+      "Integrity": "FISi3VzNw6QBqmc9ExmYyKnqD9DRrH76JUeuO+emzsk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ProjectDetails.js"
     },
     {
       "Identity": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectIndex.js",
@@ -1396,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k2qo9n67q9",
-      "Integrity": "/B5ZPnDGGR989YjFczeeMVh7RtgLZPXen8dRNgGZm0c=",
+      "Fingerprint": "xbuyeb1f2p",
+      "Integrity": "DXi/MhHyo0M6WZ4DoRM0dAXk+l/+gIpkEsDweqQ1N2k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\ProjectIndex.js"
@@ -5028,6 +5049,51 @@
       ]
     },
     {
+      "Route": "js/ProjectCreate.6xoyz6egjr.js",
+      "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectCreate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "695"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qm0vDRNxj/lYKDZfBRVW24F3GwfPf1DwalPiAHHP+x8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 02:51:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6xoyz6egjr"
+        },
+        {
+          "Name": "label",
+          "Value": "js/ProjectCreate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qm0vDRNxj/lYKDZfBRVW24F3GwfPf1DwalPiAHHP+x8="
+        }
+      ]
+    },
+    {
       "Route": "js/ProjectCreate.js",
       "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectCreate.js",
       "Selectors": [],
@@ -5038,7 +5104,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "735"
+          "Value": "695"
         },
         {
           "Name": "Content-Type",
@@ -5046,11 +5112,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"upEFV+FC+vk7025PeLobsFL1tIWu3r/7oPr1lQtmKIk=\""
+          "Value": "\"qm0vDRNxj/lYKDZfBRVW24F3GwfPf1DwalPiAHHP+x8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:20:43 GMT"
+          "Value": "Mon, 05 May 2025 02:51:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5060,13 +5126,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-upEFV+FC+vk7025PeLobsFL1tIWu3r/7oPr1lQtmKIk="
+          "Value": "sha256-qm0vDRNxj/lYKDZfBRVW24F3GwfPf1DwalPiAHHP+x8="
         }
       ]
     },
     {
-      "Route": "js/ProjectCreate.u3zomt2hro.js",
-      "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectCreate.js",
+      "Route": "js/ProjectDetails.js",
+      "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectDetails.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5075,7 +5141,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "735"
+          "Value": "1122"
         },
         {
           "Name": "Content-Type",
@@ -5083,11 +5149,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"upEFV+FC+vk7025PeLobsFL1tIWu3r/7oPr1lQtmKIk=\""
+          "Value": "\"FISi3VzNw6QBqmc9ExmYyKnqD9DRrH76JUeuO+emzsk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:20:43 GMT"
+          "Value": "Mon, 05 May 2025 03:05:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FISi3VzNw6QBqmc9ExmYyKnqD9DRrH76JUeuO+emzsk="
+        }
+      ]
+    },
+    {
+      "Route": "js/ProjectDetails.s6upf42wzn.js",
+      "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectDetails.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FISi3VzNw6QBqmc9ExmYyKnqD9DRrH76JUeuO+emzsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 03:05:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5097,15 +5200,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u3zomt2hro"
+          "Value": "s6upf42wzn"
         },
         {
           "Name": "label",
-          "Value": "js/ProjectCreate.js"
+          "Value": "js/ProjectDetails.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-upEFV+FC+vk7025PeLobsFL1tIWu3r/7oPr1lQtmKIk="
+          "Value": "sha256-FISi3VzNw6QBqmc9ExmYyKnqD9DRrH76JUeuO+emzsk="
         }
       ]
     },
@@ -5120,7 +5223,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2562"
+          "Value": "2539"
         },
         {
           "Name": "Content-Type",
@@ -5128,11 +5231,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/B5ZPnDGGR989YjFczeeMVh7RtgLZPXen8dRNgGZm0c=\""
+          "Value": "\"DXi/MhHyo0M6WZ4DoRM0dAXk+l/+gIpkEsDweqQ1N2k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:22:56 GMT"
+          "Value": "Mon, 05 May 2025 03:07:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5142,12 +5245,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/B5ZPnDGGR989YjFczeeMVh7RtgLZPXen8dRNgGZm0c="
+          "Value": "sha256-DXi/MhHyo0M6WZ4DoRM0dAXk+l/+gIpkEsDweqQ1N2k="
         }
       ]
     },
     {
-      "Route": "js/ProjectIndex.k2qo9n67q9.js",
+      "Route": "js/ProjectIndex.xbuyeb1f2p.js",
       "AssetFile": "C:\\Users\\randy\\Desktop\\GitHub\\NixonRandy_TaskProject\\NixonRandy_Project1\\wwwroot\\js\\ProjectIndex.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5157,7 +5260,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2562"
+          "Value": "2539"
         },
         {
           "Name": "Content-Type",
@@ -5165,11 +5268,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/B5ZPnDGGR989YjFczeeMVh7RtgLZPXen8dRNgGZm0c=\""
+          "Value": "\"DXi/MhHyo0M6WZ4DoRM0dAXk+l/+gIpkEsDweqQ1N2k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:22:56 GMT"
+          "Value": "Mon, 05 May 2025 03:07:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5179,7 +5282,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k2qo9n67q9"
+          "Value": "xbuyeb1f2p"
         },
         {
           "Name": "label",
@@ -5187,7 +5290,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/B5ZPnDGGR989YjFczeeMVh7RtgLZPXen8dRNgGZm0c="
+          "Value": "sha256-DXi/MhHyo0M6WZ4DoRM0dAXk+l/+gIpkEsDweqQ1N2k="
         }
       ]
     },
@@ -5214,7 +5317,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:18:07 GMT"
+          "Value": "Mon, 05 May 2025 02:29:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5259,7 +5362,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 01:18:07 GMT"
+          "Value": "Mon, 05 May 2025 02:29:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10052,7 +10155,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 00:24:20 GMT"
+          "Value": "Mon, 05 May 2025 01:48:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10089,7 +10192,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 00:24:20 GMT"
+          "Value": "Mon, 05 May 2025 01:48:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10126,7 +10229,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 00:24:20 GMT"
+          "Value": "Mon, 05 May 2025 01:48:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10171,7 +10274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 00:24:20 GMT"
+          "Value": "Mon, 05 May 2025 01:48:20 GMT"
         },
         {
           "Name": "Cache-Control",

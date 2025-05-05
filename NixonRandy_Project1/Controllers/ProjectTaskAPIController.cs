@@ -7,8 +7,10 @@ using NixonRandy_Project1.Services;
 
 namespace NixonRandy_Project1.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController, Authorize, EnableCors]
+    [ApiController]
+    [EnableCors("AllowAll")]
+    [Route("/api/task")]
+    
     public class ProjectTaskAPIController : ControllerBase
     {
         private readonly ITasksRepo _tasksRepo;
@@ -16,15 +18,15 @@ namespace NixonRandy_Project1.Controllers
         {
             _tasksRepo = tasksRepo;
         }
-        // GET: api/<ProjectTaskAPIController>
+        // GET: api/<ProjectTask>/all
         [HttpGet("all")]
         public IActionResult Get()
         {
             return Ok(_tasksRepo.GetAll());
         }
 
-        // GET api/<ProjectTaskAPIController>/one/5
-        [HttpGet("one/{id}")]
+        // GET api/<ProjectTask>/one/5
+        [HttpGet("/one/{id}")]
         public IActionResult Get(int id)
         {
             var project = _tasksRepo.Details(id);
@@ -35,15 +37,15 @@ namespace NixonRandy_Project1.Controllers
             return Ok(project);
         }
 
-        // POST api/<ProjectTaskAPIController>/create
-        [HttpPost("Create")]
+        // POST api/<ProjectTask>/create
+        [HttpPost("/Create")]
         public IActionResult Post([FromForm] ProjectTask projectTask)
         {
             _tasksRepo.Create(projectTask);
             return CreatedAtAction(nameof(Get), new { id = projectTask.TaskId }, projectTask);
         }
 
-        // PUT api/<ProjectTaskAPIController>/update
+        // PUT api/<ProjectTask>/update
         [HttpPut("update")]
         public IActionResult Put([FromForm] ProjectTask projectTask)
         {
@@ -51,7 +53,7 @@ namespace NixonRandy_Project1.Controllers
             return NoContent(); // 204 as per HTTP specification
         }
 
-        // DELETE api/<ProjectTaskAPIController>/delete/5
+        // DELETE api/<ProjectTask>/delete/5
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(int id)
         {

@@ -2,50 +2,52 @@
 import { ProjectRepo } from './ProjectRepo.js';
 //import { DOM } from "./DOMCreator.js";
 
-const projectRepo1 = new ProjectRepo('https://localhost:7099/api/boardgame');
-let boardGames = await boardGameRepository.readAll();
-console.log(boardGames);
-function addBoardGameToTable(tbody, boardGame) {
+const projectRepo1 = new ProjectRepo('https://localhost:7078/api/project');
+let projectReadAll = await projectRepo1.readAll();
+console.log(projectReadAll);
+function addProjectToTable(tbody, project) {
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
 
     let td = document.createElement('td');
-    td.textContent = boardGame.id;
+    td.textContent = project.ProjectId;
     tr.appendChild(td);
 
     td = document.createElement('td');
-    td.textContent = boardGame.title;
+    td.textContent = project.Title;
     tr.appendChild(td);
 
     td = document.createElement('td');
-    td.textContent = boardGame.maxPlayers;
+    td.textContent = project.Description;
     tr.appendChild(td);
 
     td = document.createElement('td');
-    td.textContent = boardGame.minPlayers;
+    td.textContent = project.CreationDate;
     tr.appendChild(td);
 
     td = document.createElement('td');
-    td.textContent = boardGame.playingTimeMinutes;
+    td.textContent = project.DueDate;
     tr.appendChild(td);
 
-    td = document.createElement('a');
-    let link = createLink('Edit', `/boardgame/edit/${boardGame.id}`, 'warning');
+    /*td = document.createElement('a');
+    let link = createLink('Edit', `/Dashboard/edit/${project.ProjectId}`, 'warning');
     td.append(link);
     tr.appendChild(td);
 
     td = document.createElement('a');
-    link = createLink('Details', `/boardgame/details/${boardGame.id}`, 'info');
+    link = createLink('Details', `/Dashboard/details/${project.ProjectId}`, 'info');
     td.append(link);
     tr.appendChild(td);
 
     td = document.createElement('a');
-    link = createLink('Delete', `/boardgame/delete/${boardGame.id}`, 'danger');
-    td.append(link);
+    link = createLink('Delete', `/Dashboard/delete/${project.ProjectId}`, 'danger');
+    td.append(link);*/
     tr.appendChild(td);
+    tbody.appendChild(tr);
 }
 
-const tbodyBoardGameTable = document.getElementById('tbodyBoardGameTable');
+
+const tablebody = document.getElementById('tablebody');
 
 /*const firstBoardGame = {
     id: 1,
@@ -59,20 +61,19 @@ const tbodyBoardGameTable = document.getElementById('tbodyBoardGameTable');
     addBoardGameToTable(tbodyBoardGameTable, firstBoardGame);
 }*/
 
-async function populateBoardGames(boardGameRepo) {
-    const tbody = document.getElementById('tbodyBoardGameTable');
+async function populateProjects(projectRepo) {
+    const tbody = document.getElementById('tablebody');
     try {
-        const boardGames = await boardGameRepo.readAll();
-        boardGames.forEach(boardGame => {
-            addBoardGameToTable(tbody, boardGame);
+        const Projects = await projectRepo.readAll();
+        Projects.forEach(projects => {
+            addProjectToTable(tbody, projects); 
         });
-        return boardGames;
-
+        return Projects;
     } catch (error) {
         console.error("Error populating board games:", error);
     }
 }
-console.log(await populateBoardGames(boardGameRepository));
+console.log(await populateProjects(projectRepo1));
 
 function createLink(text, url, btntype) {
     const a = document.createElement('a');

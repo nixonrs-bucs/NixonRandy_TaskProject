@@ -2,7 +2,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectAPIController",
     "Method": "Get",
-    "RelativePath": "api/ProjectAPI/all",
+    "RelativePath": "api/project/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectAPIController",
     "Method": "Post",
-    "RelativePath": "api/ProjectAPI/Create",
+    "RelativePath": "api/project/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -58,7 +58,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectAPIController",
     "Method": "Delete",
-    "RelativePath": "api/ProjectAPI/delete/{id}",
+    "RelativePath": "api/project/delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -74,7 +74,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectAPIController",
     "Method": "Get",
-    "RelativePath": "api/ProjectAPI/one/{id}",
+    "RelativePath": "api/project/one/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -90,7 +90,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectAPIController",
     "Method": "Put",
-    "RelativePath": "api/ProjectAPI/update",
+    "RelativePath": "api/project/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -136,7 +136,7 @@
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
     "Method": "Get",
-    "RelativePath": "api/ProjectTaskAPI/all",
+    "RelativePath": "api/task/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -145,8 +145,65 @@
   },
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/task/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
+    "Method": "Put",
+    "RelativePath": "api/task/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TaskId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TaskTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TaskDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TaskCreationDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "TaskDueDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tasks",
+        "Type": "System.Collections.Generic.ICollection\u00601[[NixonRandy_Project1.Models.Entities.TaskProject, NixonRandy_Project1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
     "Method": "Post",
-    "RelativePath": "api/ProjectTaskAPI/Create",
+    "RelativePath": "Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -186,24 +243,8 @@
   },
   {
     "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
-    "Method": "Delete",
-    "RelativePath": "api/ProjectTaskAPI/delete/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
     "Method": "Get",
-    "RelativePath": "api/ProjectTaskAPI/one/{id}",
+    "RelativePath": "one/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -212,47 +253,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NixonRandy_Project1.Controllers.ProjectTaskAPIController",
-    "Method": "Put",
-    "RelativePath": "api/ProjectTaskAPI/update",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "TaskId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "TaskTitle",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TaskDescription",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TaskCreationDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "TaskDueDate",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Tasks",
-        "Type": "System.Collections.Generic.ICollection\u00601[[NixonRandy_Project1.Models.Entities.TaskProject, NixonRandy_Project1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

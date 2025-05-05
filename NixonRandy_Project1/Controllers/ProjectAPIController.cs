@@ -9,9 +9,9 @@ using NixonRandy_Project1.Services;
 
 namespace NixonRandy_Project1.Controllers
 {
-    [EnableCors("AllowAll")]
-    [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
+    [Route("/api/project")]
     public class ProjectAPIController : ControllerBase
     {
         private readonly IProjectRepo _projectRepo;
@@ -19,14 +19,14 @@ namespace NixonRandy_Project1.Controllers
         {
             _projectRepo = projectRepo;
         }
-        // GET: api/<ProjectAPIController>/all
+        // GET: api/<Project>/all
         [HttpGet("all")]
         public IActionResult Get()
         {
             return Ok(_projectRepo.GetAll());
         }
 
-        // GET api/<ProjectAPIController>/one/5
+        // GET api/<Project>/one/5
         [HttpGet("one/{id}")]
         public IActionResult Get(int id)
         {
@@ -38,7 +38,7 @@ namespace NixonRandy_Project1.Controllers
             return Ok(project);
         }
 
-        // POST api/<ProjectAPIController>/create
+        // POST api/<Project>/create
         [HttpPost("Create")]
         public IActionResult Post([FromForm] Project project)
         {
@@ -46,7 +46,7 @@ namespace NixonRandy_Project1.Controllers
             return CreatedAtAction(nameof(Get), new { id = project.ProjectId }, project);
         }
 
-        // PUT api/<ProjectAPIController>/update
+        // PUT api/<Project>/update
         [HttpPut("update")]
         public IActionResult Put([FromForm] Project project)
         {
@@ -54,7 +54,7 @@ namespace NixonRandy_Project1.Controllers
             return NoContent(); // 204 as per HTTP specification
         }
 
-        // DELETE api/<ProjectAPIController>/delete/5
+        // DELETE api/<Project>/delete/5
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(int id)
         {
