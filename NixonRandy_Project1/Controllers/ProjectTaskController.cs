@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NixonRandy_Project1.Services;
 
 namespace NixonRandy_Project1.Controllers
 {
+    [Authorize]
     public class ProjectTaskController : Controller
     {
         private readonly ITasksRepo _taskRepo;
