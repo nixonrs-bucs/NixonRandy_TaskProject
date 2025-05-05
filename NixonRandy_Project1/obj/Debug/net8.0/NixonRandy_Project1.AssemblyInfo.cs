@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NixonRandy_Project1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4339dc1c7adcac8ed03f599041764bcc33c4dd91")]
 [assembly: System.Reflection.AssemblyProductAttribute("NixonRandy_Project1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NixonRandy_Project1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<NixonRandy_Project1.Models.Entities.Project>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="accordion-button" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -20,31 +20,26 @@
             </th>
         </tr>
     </thead>
-    <tbody>
-        @if (Model != null && Model.Any())
+    <tbody id="tablebody">
+        @if(Model != null && Model.Any())
         {
-            @foreach (var item in Model)
+            @foreach(var item in Model)
             {
                 <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CreationDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DueDate)</td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreationDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DueDate)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ProjectId">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ProjectId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ProjectId">Delete</a> 
+                        <a class="btn btn-warning mx-1" asp-action="Edit" asp-route-id="@item.ProjectId">Edit</a> |
+                        <a class="btn btn-info mx-1" asp-action="Details" asp-route-id="@item.ProjectId">Details</a> |
+                        <a class="btn btn-danger mx-1" asp-action="Delete"  asp-route-id="@item.ProjectId">Delete</a>
                     </td>
                 </tr>
             }
         }
     </tbody>
 </table>
+@section Scripts {
+    <!--<script src="~/js/ProjectIndex.js" type="module"></script>-->
+}

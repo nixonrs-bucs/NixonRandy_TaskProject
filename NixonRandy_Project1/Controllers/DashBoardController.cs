@@ -1,10 +1,13 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration.UserSecrets;
 using NixonRandy_Project1.Services;
 
 namespace NixonRandy_Project1.Controllers
 {
+    [Authorize]
     public class DashBoardController : Controller
     {
         private readonly IProjectRepo _projectRepo;
@@ -15,6 +18,7 @@ namespace NixonRandy_Project1.Controllers
         }
         // GET:
         [HttpGet, ActionName(nameof(Index))]
+        [Authorize]
         public async Task<ActionResult> Index()
         {
             var projects = await _projectRepo.GetAllAsyncs();
@@ -107,7 +111,7 @@ namespace NixonRandy_Project1.Controllers
         }
 
         // POST: Dashboard/Delete/5
-        [HttpPost, ActionName(nameof(DeleteConfirmed))]
+        [HttpPost, ActionName(nameof(Delete))]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int Id)
         {
